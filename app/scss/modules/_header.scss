@@ -1,0 +1,203 @@
+.header {
+   background: url("../images/bgr.jpg") no-repeat top center;
+   background-size: cover;
+   color: $white-c;
+   min-height: 100vh;
+   background-attachment: fixed;
+
+   &__wrapper {
+      min-height: calc(100vh - 220px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__text {
+      text-align: center;
+      font: 1.5rem $font-p;
+      margin-bottom: 30px;
+   }
+
+   &__suptitle {
+      font-size: 1.125rem;
+      line-height: 1.625rem;
+   }
+
+   &__title {
+      font-size: 5rem;
+      display: flex;
+   }
+
+   &__logo {
+      position: relative;
+      margin-bottom: 30px;
+   }
+
+   &__icon {
+      @include align(true, true, absolute);
+      font-size: 2.5rem;
+   }
+
+   &__content {
+      margin-bottom: 8vh;
+   }
+
+   &__info {
+      font-size: 2.5rem;
+      color: $green-c;
+      margin-bottom: 5vh;
+      font-family: $font-b;
+   }
+
+   &__place {
+      color: $white-c;
+      cursor: pointer;
+      font-size: 1.125rem;
+   }
+}
+
+@media (max-width: $tablet) {
+   .header {
+      &__suptitle {
+         margin-top: 10vh;
+      }
+   }
+}
+
+@media (min-width: $tablet) {
+   .header {
+      &__title {
+         font-size: 7rem;
+      }
+
+      &__text {
+         font-size: 1.6rem;
+      }
+
+      &__icon {
+         font-size: 3.75rem;
+      }
+
+      &__suptitle {
+         font-size: 1.3rem;
+      }
+
+      &__info {
+         font-size: 3rem;
+      }
+
+      &__wrapper {
+         min-height: calc(100vh - 156px);
+      }
+   }
+}
+
+@media (min-width: $laptop) {
+   .header {
+      &__title {
+         font-size: 8.75rem;
+         line-height: 3rem;
+         margin-top: 50px; 
+      }
+
+      &__text {
+         font-size: 2rem;
+      }
+
+      &__icon {
+         font-size: 4.375rem;
+      }
+
+      &__box {
+         margin-left: 20%;
+      }
+   }
+}
+
+// .header {
+//    background: url('../images/bgr.jpg') no-repeat top center;
+//    background-size: cover;
+//    color: $white-c;
+//    background-attachment: fixed;
+
+//    &::before {
+//       @include size(100%);
+//       @include pos(absolute, 0, 0, 0, 0);
+//       content: '';
+//       background: rgba(0,0,0,.6);
+//       z-index: 0;
+//    }
+
+//    &__wrapper {
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: space-between;
+//       align-items: center;
+//       min-height: calc(100vh - 161px);
+//    }
+
+//    &__block {
+//       margin-bottom: 20px;
+//    }
+
+//    &__suptitle {
+//       font-size: 36px;
+//       line-height: 45px;
+//    }
+
+//    &__title {
+//       font-size: 250px;
+//       display: flex;
+//    }
+
+//    &__logo {
+//       position: relative;
+//    }
+
+//    &__icon {
+//       @include align(true, true, absolute);
+//       font-size: 120px;
+//    }
+
+//    &__content {
+//       margin-bottom: 70px;
+//    }
+
+//    &__info {
+//       font-size: 72px;
+//       font-weight: 700;
+//       color: $green-c;
+//       margin-bottom: 20px;
+//    }
+
+//    &__place {
+//       color: $white-c;
+//       cursor: pointer;
+//       font-size: 24px;
+//    }
+
+//    &__text {
+//       font: 64px $font-p;
+//       white-space: nowrap;
+//       margin-bottom: 70px;
+//    }
+
+//    &__btn {
+//       text-transform: uppercase;
+//       color: $orange-c;
+//       cursor: pointer;
+//       font-weight: 700;
+//       padding: 20px 50px;
+//       border: 2px solid $orange-c;
+//       border-radius: 10px;
+//       transition: all .3s ease;
+//       margin-bottom: 50px;
+
+//       &:hover {
+//          background: $orange-c;
+//          color: $white-c;
+//          box-shadow: 0px 0px 15px 10px rgba(219, 141, 68, 0.2);
+//       }
+//    }
+// }

@@ -1,0 +1,125 @@
+.title {
+   font: 700 1.75rem $font-p;
+   text-transform: uppercase;
+   padding-left: 25px;
+   margin-bottom: 40px;
+   position: relative;
+   display: inline-block;
+   border-left: 4px solid $orange-c;
+}
+
+.btn {
+   text-align: center;
+   text-transform: uppercase;
+   color: $orange-c;
+   cursor: pointer;
+   font-family: $font-b;
+   padding: 15px 25px;
+   border: 2px solid $orange-c;
+   border-radius: 10px;
+   transition: all 0.3s ease;
+   margin-bottom: 50px;
+   display: inline-block;
+}
+
+.text__bgr {
+   display: none;
+}
+
+.circle {
+   padding-bottom: 40px;
+   @include align(true, false, absolute);
+   &__item {
+      @include size(200px);
+      border-radius: 50%;
+      opacity: 0.1;
+   }
+
+   &__blue {
+      @include pos($t: 150px, $l: 75px);
+      background: $blue-c;
+   }
+
+   &__green {
+      @include pos($t: 0, $l: 0);
+      background: $green-c;
+   }
+
+   &__orange {
+      @include pos($t: 0, $l: 150px);
+      background: $orange-c;
+   }
+
+   &__content {
+      @include align(true, true, absolute);
+      color: $white-c;
+      text-align: center;
+   }
+
+   &__icon {
+      font-size: 7rem;
+   }
+}
+
+@media (min-width: $tablet) {
+   .title {
+      font-size: 2.3rem;
+   }
+
+   .btn {
+      margin-bottom: 25px;
+   }
+
+   .text__bgr {
+      @include align(true, true, absolute);
+      font: 700 5rem/10rem $font-p;
+      user-select: none;
+      display: block;
+      text-transform: uppercase;
+      opacity: 0.05;
+      z-index: 1;
+   }
+}
+
+@media (min-width: $laptop) {
+   .title {
+      font-size: 2.5rem;
+   }
+
+   .btn {
+      padding: 15px 50px;
+   }
+
+   .text__bgr {
+      font-size: 8rem;
+      line-height: 15rem;
+   }
+
+   .circle {
+      @include pos($t: -40px, $l: 0);
+
+      &__item {
+         @include size(400px);
+      }
+
+      &__blue {
+         @include pos($t: 300px, $l: 150px);
+      }
+
+      &__green {
+         @include pos($t: 0, $l: 0);
+      }
+
+      &__orange {
+         @include pos($t: 0, $l: 300px);
+      }
+
+      &__icon {
+         font-size: 15rem;
+      }
+
+      &__text {
+         font-size: 3.125rem;
+      }
+   }
+}

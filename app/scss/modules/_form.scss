@@ -1,0 +1,17 @@
+.form {
+   padding: 0 0 50px;
+   position: relative;
+   &__wrapper {
+      margin: 0 auto;
+      width: 600px;
+   }
+}
+
+@media (max-width: 600px) {
+   .form {
+      &__wrapper {
+         width: 100%;
+      }
+   }
+}
+

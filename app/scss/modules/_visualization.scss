@@ -1,0 +1,105 @@
+.visualization {
+   padding: 60px 0;
+   position: relative;
+   text-align: center;
+
+   &__wrapper {
+      position: relative;
+
+      &::before {
+         @include size(50%, 90%);
+         @include pos($b: -10%, $r: 0);
+         content: "";
+         background: $blue-c;
+         border-radius: 20px;
+      }
+   }
+
+   &__item {
+      @include size(90%, 250px);
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+   }
+
+   &__img {
+      @include size(100%);
+      @include align(true, true, absolute);
+      object-fit: cover;
+   }
+
+   &__btn {
+      @include size(60px);
+      @include align(true, true, absolute);
+      background: rgba(219, 141, 68, 0.2);
+      backdrop-filter: blur(10px);
+      border-radius: 50%;
+      cursor: pointer;
+
+      &::before {
+         @include size(40px);
+         @include align(true, true, absolute);
+         content: "";
+         background: rgba(219, 141, 68, 0.7);
+         border-radius: 50%;
+      }
+
+      &::after {
+         @include size(0px);
+         @include align(true, true, absolute);
+         content: "";
+         width: 0;
+         height: 0;
+         border-style: solid;
+         border-width: 7.5px 0 7.5px 15px;
+         border-color: transparent transparent transparent #ffffff;
+      }
+   }
+}
+
+@media (min-width: $tablet) {
+   .visualization {
+      &__item {
+         height: 450px;
+      }
+
+      &__btn {
+         @include size(100px);
+         @include align(true, true, absolute);
+         background: rgba(219, 141, 68, 0.2);
+         backdrop-filter: blur(10px);
+         border-radius: 50%;
+
+         &::before {
+            @include size(60px);
+            @include align(true, true, absolute);
+            content: "";
+            background: rgba(219, 141, 68, 0.7);
+            border-radius: 50%;
+         }
+
+         &::after {
+            @include size(0px);
+            @include align(true, true, absolute);
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 15px 0 15px 30px;
+            border-color: transparent transparent transparent #ffffff;
+         }
+      }
+   }
+}
+
+@media (min-width: $tablet) {
+   .visualization {
+      padding: 100px 0;
+      & h2 {
+         margin-bottom: 70px;
+      }
+      &__item {
+         height: 700px;
+      }
+   }
+}

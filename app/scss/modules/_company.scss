@@ -1,0 +1,107 @@
+.company {
+   padding: 60px 0;
+
+   &__head {
+      text-align: center;
+   }
+
+   &__item {
+      width: 330px;
+      overflow: hidden;
+      background: #deedfc;
+      border-radius: 20px;
+      margin: 0 auto;
+   }
+
+   &__photo {
+      height: 320px;
+      position: relative;
+      margin-bottom: 25px;
+   }
+
+   &__img {
+      @include size(100%);
+      @include align(true, true, absolute);
+      object-fit: cover;
+   }
+
+   &__info {
+      padding: 0 15px 30px;
+      color: $blue-c;
+   }
+
+   &__title {
+      font-size: 1.75rem;
+      margin-bottom: 25px;
+   }
+
+   &__content {
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__suptitle {
+      font-weight: 700;
+      margin-bottom: 10px;
+   }
+
+   & .slick {
+      &-dots {
+         display: flex;
+         justify-content: center;
+         margin: 35px 0 10px;
+         & button {
+            @include size(10px);
+            font-size: 0;
+            border-radius: 50px;
+            background: #c4c4c4;
+            margin: 0 10px;
+            outline: none;
+         }
+      }
+      &-active {
+         & button {
+            background: $orange-c;
+         }
+      }
+   }
+}
+
+@media (min-width: $laptop) {
+   .company {
+      padding: 100px 0;
+
+      &__item {
+         width: 300px;
+      }
+
+      &__title {
+         font-size: 2rem;
+         margin-bottom: 30px;
+      }
+
+      &__content {
+      &:not(:last-child) {
+         margin-bottom: 25px;
+      }
+   }
+
+      &__suptitle,
+      &__text {
+         font-size: 1.25rem;
+      }
+
+      &__info {
+      padding: 0 20px 40px;
+   }
+   }
+}
+
+@media (min-width: 1200px) {
+   .company {
+      &__item {
+         width: 350px;
+      }
+   }
+}

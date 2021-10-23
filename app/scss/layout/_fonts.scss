@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+@include font-face('Century Gothic Regular', 'fonts/centuryGothic/CenturyGothic');
+@include font-face('Century Gothic Bold', 'fonts/centuryGothic/CenturyGothic-Bold');
+
+@include font-face('icomoon', 'fonts/icomoon/icomoon', $ver: '?go8q3f')
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow:before {
+  content: "\e900";
+}
+.icon-arrow-r:before {
+  content: "\e901";
+}
+.icon-bicycle:before {
+  content: "\e902";
+}
+.icon-car:before {
+  content: "\e903";
+}
+.icon-fb:before {
+  content: "\e904";
+}
+.icon-gym:before {
+  content: "\e905";
+}
+.icon-highway:before {
+  content: "\e906";
+}
+.icon-horse:before {
+  content: "\e907";
+}
+.icon-inst:before {
+  content: "\e908";
+}
+.icon-logo:before {
+  content: "\e909";
+}
+.icon-mail:before {
+  content: "\e90a";
+}
+.icon-map:before {
+  content: "\e90b";
+}
+.icon-mark:before {
+  content: "\e90c";
+}
+.icon-palm:before {
+  content: "\e90d";
+}
+.icon-phone:before {
+  content: "\e90e";
+}
+.icon-rest:before {
+  content: "\e90f";
+}
