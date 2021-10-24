@@ -20,6 +20,33 @@
    transition: all 0.3s ease;
    margin-bottom: 50px;
    display: inline-block;
+   transition: all 0.3s ease;
+   position: relative;
+   overflow: hidden;
+
+   &::before,
+   &::after {
+      @include size(50%, 100%);
+      @include align(true, false, absolute);
+      content: "";
+      transition: all 0.3s ease;
+      background: $orange-c;
+      opacity: 0;
+   }
+
+   &::before {
+      left: -100px;
+   }
+
+   &::after {
+      right: -100px;
+   }
+
+   &__text {
+      position: relative;
+      transition: all 0.3s ease;
+      z-index: 10;
+   }
 }
 
 .text__bgr {
@@ -88,6 +115,25 @@
 
    .btn {
       padding: 15px 50px;
+      &:hover {
+         border-color: transparent;
+         &::before,
+         &::after {
+            opacity: 1;
+         }
+
+         &::before {
+            left: 0;
+         }
+
+         &::after {
+            right: 0;
+         }
+
+         & .btn__text {
+            color: $white-c;
+         }
+      }
    }
 
    .text__bgr {

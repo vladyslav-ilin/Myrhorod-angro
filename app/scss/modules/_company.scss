@@ -63,6 +63,7 @@
       &-active {
          & button {
             background: $orange-c;
+            box-shadow: 0px 0px 10px 5px rgba(219, 141, 68, 0.2);
          }
       }
    }
@@ -82,10 +83,10 @@
       }
 
       &__content {
-      &:not(:last-child) {
-         margin-bottom: 25px;
+         &:not(:last-child) {
+            margin-bottom: 25px;
+         }
       }
-   }
 
       &__suptitle,
       &__text {
@@ -93,8 +94,8 @@
       }
 
       &__info {
-      padding: 0 20px 40px;
-   }
+         padding: 0 20px 40px;
+      }
    }
 }
 

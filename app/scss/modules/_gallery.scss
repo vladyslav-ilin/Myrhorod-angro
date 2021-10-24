@@ -24,11 +24,13 @@
                background: #c4c4c4;
                margin: 0 10px;
                outline: none;
+               transition: all .3s ease;
             }
          }
          &-active {
             & button {
                background: $orange-c;
+               box-shadow: 0px 0px 10px 5px rgba(219, 141, 68, 0.2);
             }
          }
       }

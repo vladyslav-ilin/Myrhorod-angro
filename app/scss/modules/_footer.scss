@@ -17,10 +17,12 @@
 
    &__icon {
       color: #000;
+      transition: all .3s ease;
    }
 
    &__view {
       background: $white-c;
+      transition: all .3s ease;
    }
 
    &__social {

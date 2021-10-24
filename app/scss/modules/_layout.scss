@@ -1,6 +1,11 @@
 .layout {
    padding: 60px 0;
    text-align: center;
+   position: relative;
+
+   &__container {
+      position: relative;
+   }
 
    &__rooms {
       display: flex;
@@ -19,6 +24,8 @@
       padding: 30px 20px;
       margin-bottom: 35px;
       cursor: pointer;
+      position: relative;
+      transition: all 0.3s ease;
       &--active {
          background: $blue-c;
 
@@ -27,9 +34,6 @@
             &__text {
                color: $white-c;
             }
-
-
-
          }
       }
    }
@@ -59,11 +63,16 @@
       }
    }
 
+   &__item {
+      margin-bottom: 25px;
+   }
+
    &__photo {
-      @include size(330px, 300px);
+      @include size(330px, 240px);
       overflow: hidden;
       position: relative;
       margin: 0 auto;
+      transition: all 0.3s ease;
    }
 
    &__img {
@@ -71,53 +80,191 @@
       @include align(true, true, absolute);
       object-fit: cover;
    }
+
+   &__arrow {
+      @include size(50px);
+      @include align(true, false, absolute);
+      border: 1px solid $green-c;
+      border-radius: 50px;
+      z-index: 50;
+      cursor: pointer;
+      top: 25%;
+      &::before {
+         @include size(100%);
+         @include pos($t: 0, $l: 0);
+         content: "";
+         background: url("../../images/arrow.svg") center no-repeat;
+      }
+
+      &-prev {
+         left: 0;
+      }
+
+      &-next {
+         right: 0;
+         &::before {
+            transform: rotate(180deg);
+         }
+      }
+   }
+
+   &__info {
+      width: 320px;
+      padding: 35px 20px;
+      background: $blue-c;
+      color: $white-c;
+      border-radius: 20px;
+      margin: 0 auto;
+   }
+
+   &__suptitile {
+      font-size: 1.5rem;
+      margin-bottom: 50px;
+   }
+
+   &__inner {
+      width: 80%;
+      margin: 0 auto 40px;
+   }
+
+   &__place {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+   }
+
+   &__number {
+      @include size(30px);
+      line-height: 30px;
+      color: $blue-c;
+      border-radius: 50px;
+      background: $white-c;
+      margin-right: 30px;
+   }
+
+   &__sum {
+      font-size: 1.5rem;
+   }
+
+   &__link {
+      @include align(true, true, absolute);
+   }
+
+   &__circle {
+      top: 0;
+      transform: translate(0);
+      right: 0;
+   }
+
+   &__green {
+      right: 0;
+      left: auto;
+   }
+
+   &__orange {
+      left: auto;
+      right: 75px;
+      top: 150px;
+   }
+
+   &__blue {
+      top: 0;
+      left: auto;
+      right: 150px;
+   }
 }
 
-// .layout {
-//    padding: 120px 70px;
+@media (min-width: 600px) {
+   .layout {
+      &__photo {
+         @include size(530px, 360px);
+      }
+   }
+}
 
-//    &__title {
-//       text-align: center;
-//       margin-bottom: 95px;
-//    }
+@media (min-width: 600px) and (max-width: 1023px) {
+   .layout {
+      &__info {
+         width: 500px;
+      }
 
-//    &__rooms {
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//    }
+      &__inner {
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+   }
+}
 
-//    &__room  {
-//       display: flex;
-//       align-items: center;
-//       border-radius: 20px;
-//       box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.05);
-//       margin: 0 50px;
-//       padding: 40px 35px;
+@media (min-width: $laptop) {
+   .layout {
+      padding: 100px 0;
+      &__photo {
+         @include size(600px, 525px);
+         &:hover {
+            transform: scale(1.05);
+         }
+      }
 
-//       &--small {
-//          background: $blue-c;
-//       }
+      &__block {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
 
-//    }
+      &__arrow {
+         top: 50%;
+         &-next {
+            right: -15px;
+         }
+      }
 
-//    &__count {
-//       font-size: 4.5rem;
-//       color: $white-c;
-//       margin-right: 60px;
-//       &--big {
-//          color: $blue-c;
-//       }
-//    }
+      &__tabs {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
 
-//    &__text {
-//       font-size: 1.375rem;
-//       line-height: 2rem;
-//       color: $white-c;
-//       text-align: center;
-//       &--big {
-//          color: $blue-c;
-//       }
-//    }
+      &__room {
+         margin: 0 25px 30px;
+         padding: 50px 25px;
+         justify-content: space-around;
+         &:hover {
+            transform: scale(1.05);
+         }
+      }
 
-// }
+      &__count {
+         font-size: 3.5rem;
+         margin: 0;
+      }
+
+      &__text {
+         font-size: 1.25rem;
+      }
+
+      &__circle {
+         top: 0;
+         transform: translate(0);
+         right: 0;
+      }
+
+      &__green {
+         right: -300px;
+         top: -100px;
+      }
+
+      &__orange {
+         left: auto;
+         right: -150px;
+         top: 200px;
+      }
+
+      &__blue {
+         top: -100px;
+         left: auto;
+         right: 0;
+      }
+   }
+}

@@ -52,7 +52,6 @@
 
    &__place {
       color: $white-c;
-      cursor: pointer;
       font-size: 1.125rem;
    }
 }
@@ -114,90 +113,3 @@
       }
    }
 }
-
-// .header {
-//    background: url('../images/bgr.jpg') no-repeat top center;
-//    background-size: cover;
-//    color: $white-c;
-//    background-attachment: fixed;
-
-//    &::before {
-//       @include size(100%);
-//       @include pos(absolute, 0, 0, 0, 0);
-//       content: '';
-//       background: rgba(0,0,0,.6);
-//       z-index: 0;
-//    }
-
-//    &__wrapper {
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: space-between;
-//       align-items: center;
-//       min-height: calc(100vh - 161px);
-//    }
-
-//    &__block {
-//       margin-bottom: 20px;
-//    }
-
-//    &__suptitle {
-//       font-size: 36px;
-//       line-height: 45px;
-//    }
-
-//    &__title {
-//       font-size: 250px;
-//       display: flex;
-//    }
-
-//    &__logo {
-//       position: relative;
-//    }
-
-//    &__icon {
-//       @include align(true, true, absolute);
-//       font-size: 120px;
-//    }
-
-//    &__content {
-//       margin-bottom: 70px;
-//    }
-
-//    &__info {
-//       font-size: 72px;
-//       font-weight: 700;
-//       color: $green-c;
-//       margin-bottom: 20px;
-//    }
-
-//    &__place {
-//       color: $white-c;
-//       cursor: pointer;
-//       font-size: 24px;
-//    }
-
-//    &__text {
-//       font: 64px $font-p;
-//       white-space: nowrap;
-//       margin-bottom: 70px;
-//    }
-
-//    &__btn {
-//       text-transform: uppercase;
-//       color: $orange-c;
-//       cursor: pointer;
-//       font-weight: 700;
-//       padding: 20px 50px;
-//       border: 2px solid $orange-c;
-//       border-radius: 10px;
-//       transition: all .3s ease;
-//       margin-bottom: 50px;
-
-//       &:hover {
-//          background: $orange-c;
-//          color: $white-c;
-//          box-shadow: 0px 0px 15px 10px rgba(219, 141, 68, 0.2);
-//       }
-//    }
-// }
