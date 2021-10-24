@@ -3,7 +3,6 @@
    background-size: cover;
    color: $white-c;
    min-height: 100vh;
-   background-attachment: fixed;
 
    &__wrapper {
       min-height: calc(100vh - 220px);
@@ -94,10 +93,11 @@
 
 @media (min-width: $laptop) {
    .header {
+      background-attachment: fixed;
       &__title {
          font-size: 8.75rem;
          line-height: 3rem;
-         margin-top: 50px; 
+         margin-top: 50px;
       }
 
       &__text {

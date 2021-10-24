@@ -46,7 +46,7 @@
          @include size(100%);
          @include pos($t: 0, $l: 0);
          content: "";
-         background: url("../../images/arrow.svg") center no-repeat;
+         background: url("../images/arrow.svg") center no-repeat;
       }
 
       &-prev {
