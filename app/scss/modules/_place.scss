@@ -1,6 +1,6 @@
 .place {
    padding: 60px 0;
-   background: url("../images/place-bgr.jpg") center no-repeat;
+   background: url("../images/place-bgr-mobile.jpg") center no-repeat;
    background-size: cover;
    color: $white-c;
    text-align: center;
@@ -40,6 +40,7 @@
 
 @media (min-width: $tablet) {
    .place {
+      background: url("../images/place-bgr.jpg") center no-repeat;
       & h2 {
          margin-bottom: 70px;
       }
