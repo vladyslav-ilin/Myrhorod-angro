@@ -2,6 +2,7 @@
    padding: 60px 0;
    text-align: center;
    position: relative;
+   overflow-x: hidden;
 
    &__container {
       position: relative;
@@ -78,7 +79,7 @@
    &__img {
       @include size(100%);
       @include align(true, true, absolute);
-      object-fit: cover;
+      object-fit: contain;
    }
 
    &__arrow {
@@ -197,6 +198,20 @@
    }
 }
 
+@media (min-width: $tablet) {
+   .layout {
+      &__tabs {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      &__room {
+         margin: 0 25px 30px;
+      }
+   }
+}
+
 @media (min-width: $laptop) {
    .layout {
       padding: 100px 0;
@@ -251,20 +266,20 @@
       }
 
       &__green {
-         right: -300px;
+         right: -100px;
          top: -100px;
       }
 
       &__orange {
          left: auto;
-         right: -150px;
+         right: -50px;
          top: 200px;
       }
 
       &__blue {
          top: -100px;
          left: auto;
-         right: 0;
+         right: 100px;
       }
    }
 }

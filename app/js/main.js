@@ -97,6 +97,7 @@
       });
 
       $('.layout__room').click(function (operation) {
+         $('.layout__slider').slick('refresh');
          operation.preventDefault();
          $('.layout__room').removeClass('layout__room--active');
          $('.layout__wrapper').removeClass('layout__wrapper--active');
