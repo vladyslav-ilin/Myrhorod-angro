@@ -67,5 +67,29 @@
       &__box {
          @include align(true, true, absolute);
       }
+
+      &__link {
+         background: $white-c;
+         transition: all .3s ease;
+         &:hover {
+            background: #000;
+         }
+      }
+
+      &__local {
+         color: #000;
+         transition: all .3s ease;
+         &:hover {
+            color: $green-c;
+         }
+      }
+
+      &__angro {
+         transition: all .3s ease;
+         color: $white-c;
+         &:hover {
+            color: $green-c;
+         }
+      }
    }
 }

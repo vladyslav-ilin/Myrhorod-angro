@@ -52,14 +52,13 @@
          dots: true,
          prevArrow: '<div class="gallery__arrow gallery__arrow-prev"></div>',
          nextArrow: '<div class="gallery__arrow gallery__arrow-next"></div>',
-         autoplay: true,
+         /*autoplay: true,*/
          pauseOnFocus: true,
          arrows: false,
          fade: true,
          autoplaySpeed: 3000,
          mobileFirst: true,
          slidesToShow: 1,
-
          responsive: [
             {
                breakpoint: 425,
@@ -81,6 +80,7 @@
                   fade: false,
                   slidesToShow: 3,
                   arrows: true,
+                  /*centerMode: true,*/
                }
             },
          ]
@@ -114,6 +114,8 @@
          $('.menu__list').toggleClass('menu__list--open');
          $('.menu__content').toggleClass('menu__content--open');
       })
+
+       AOS.init();
 		
 	});
 })(jQuery);

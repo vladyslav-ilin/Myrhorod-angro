@@ -44,7 +44,13 @@
       display: flex;
       justify-content: flex-end;
       & li {
-         margin-left: 30px;
+         margin-left: 20px;
+      }
+      &-view {
+         @include size(35px);
+      }
+      &-icon {
+         font-size: 1.25rem;
       }
    }
 
@@ -53,7 +59,7 @@
    }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: 667px) {
    .menu {
       &__list {
          flex-direction: row;

@@ -13,10 +13,13 @@
       margin: 0 auto;
    }
 
+   &__text {
+      color: $text-c;
+   }
+
    &__photo {
       height: 320px;
       position: relative;
-      margin-bottom: 25px;
    }
 
    &__img {
@@ -26,7 +29,7 @@
    }
 
    &__info {
-      padding: 0 15px 30px;
+      padding: 25px 15px 30px;
       color: $blue-c;
    }
 
@@ -61,11 +64,23 @@
          }
       }
       &-active {
+
          & button {
             background: $orange-c;
             box-shadow: 0px 0px 10px 5px rgba(219, 141, 68, 0.2);
          }
       }
+      /*&-current {
+         & .company {
+            &__info {
+               background: $blue-c;
+            }
+            &__title,
+            &__suptitle {
+               color: $white-c;
+            }
+         }
+      }*/
    }
 }
 
@@ -79,12 +94,12 @@
 
       &__title {
          font-size: 2rem;
-         margin-bottom: 30px;
+         margin-bottom: 40px;
       }
 
       &__content {
          &:not(:last-child) {
-            margin-bottom: 25px;
+            margin-bottom: 40px;
          }
       }
 
@@ -94,7 +109,19 @@
       }
 
       &__info {
-         padding: 0 20px 40px;
+         padding: 30px 20px 40px;
+         height: 430px;
+      }
+
+      & .slick {
+         &-dots {
+            & button {
+               &:hover {
+                  background: $orange-c;
+                  box-shadow: 0px 0px 10px 5px rgba(219, 141, 68, 0.2);
+               }
+            }
+         }
       }
    }
 }

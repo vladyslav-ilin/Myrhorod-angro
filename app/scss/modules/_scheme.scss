@@ -66,9 +66,24 @@
    &__wrap {
       white-space: nowrap;
    }
+
+   &__btn {
+      display: none;
+   }
 }
 
-@media (min-width: $tablet) {
+/*@media (max-width: 767px) and (min-width: 667px) {
+   .scheme {
+      &__items {
+
+      }
+      &__item {
+         width: 100px;
+      }
+   }
+}*/
+
+@media (min-width: 665px) {
    .scheme {
       & h2 {
          margin-bottom: 65px;
@@ -78,9 +93,11 @@
          flex-direction: row;
          justify-content: center;
          align-items: baseline;
+         position: relative;
       }
 
       &__item {
+         width: 250px;
          &:nth-child(1) {
             order: 0;
             &::before,
@@ -129,10 +146,22 @@
       }
       &__dots {
          @include align(true, false, absolute);
-         width: 260px;
+         width: 185px;
          border-top: 15px dotted $text-c;
          display: inline-block;
          left: 60px;
+      }
+   }
+}
+
+@media (min-width: $tablet) {
+   .scheme {
+      &__item {
+         width: 330px;
+      }
+
+      &__dots {
+         width: 250px;
       }
    }
 }
@@ -143,7 +172,12 @@
 
       &__item {
          width: 280px;
-         margin: 0 15px 80px;
+         margin: 0 15px 60px;
+         &:nth-child(1),
+         &:nth-child(2),
+         &:nth-child(3) {
+            margin-bottom: 250px;
+         }
 
          &::before,
          &::after {
@@ -164,10 +198,15 @@
          }
 
          &:nth-child(4) {
-            order: 3;
+            order: 5;
+         }
+
+         &:nth-child(5) {
+            order: 4;
          }
 
          &:nth-child(6) {
+            order: 3;
             & .scheme__dots {
                display: block;
             }
@@ -184,7 +223,16 @@
          &--big {
             @include pos($t: 18px, $r: -25px);
             border-right: 15px dotted $text-c;
-            height: calc(100% - 208px);
+            height: calc(100% - 188px);
+         }
+      }
+      &__btn {
+         @include pos($t:calc(50% - 80px), $l:100px);
+         display: block;
+
+         &--mobile {
+            color: $white-c;
+            display: none;
          }
       }
    }

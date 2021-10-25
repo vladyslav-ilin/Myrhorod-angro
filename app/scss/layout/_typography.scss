@@ -26,7 +26,7 @@
 
    &::before,
    &::after {
-      @include size(50%, 100%);
+      @include size(51%, 100%);
       @include align(true, false, absolute);
       content: "";
       transition: all 0.3s ease;
@@ -47,6 +47,12 @@
       transition: all 0.3s ease;
       z-index: 10;
    }
+}
+
+.suptitle {
+   position: relative;
+   bottom: 8px;
+   font-size: 0.8rem;
 }
 
 .text__bgr {
@@ -105,6 +111,10 @@
       text-transform: uppercase;
       opacity: 0.05;
       z-index: 1;
+   }
+
+   .suptitle {
+      font-size: 1rem;
    }
 }
 

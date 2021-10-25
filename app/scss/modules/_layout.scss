@@ -15,18 +15,19 @@
    }
 
    &__room {
-      width: 330px;
+      width: 270px;
       margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 20px;
       box-shadow: 6px 6px 10px 5px rgba(0, 0, 0, 0.1);
-      padding: 30px 20px;
+      padding: 15px;
       margin-bottom: 35px;
       cursor: pointer;
       position: relative;
       transition: all 0.3s ease;
+      background: $white-c;
       &--active {
          background: $blue-c;
 
@@ -49,7 +50,7 @@
    }
 
    &__text {
-      line-height: 1.5rem;
+      line-height: 2rem;
       color: $blue-c;
       text-align: center;
       &--active {
@@ -85,16 +86,18 @@
    &__arrow {
       @include size(50px);
       @include align(true, false, absolute);
-      border: 1px solid $green-c;
+      border: 1px solid transparent;
       border-radius: 50px;
       z-index: 50;
       cursor: pointer;
-      top: 25%;
+      top: 15%;
+      transition: all .3s ease;
       &::before {
          @include size(100%);
-         @include pos($t: 0, $l: 0);
+         @include pos($t: 0, $l: -2px);
          content: "";
          background: url("../images/arrow.svg") center no-repeat;
+         transition: all .3s ease;
       }
 
       &-prev {
@@ -102,7 +105,7 @@
       }
 
       &-next {
-         right: 0;
+         right: 2px;
          &::before {
             transform: rotate(180deg);
          }
@@ -152,9 +155,9 @@
    }
 
    &__circle {
-      top: 0;
+      top: 5px;
       transform: translate(0);
-      right: 0;
+      right: 5px;
    }
 
    &__green {
@@ -172,6 +175,10 @@
       top: 0;
       left: auto;
       right: 150px;
+   }
+
+   &__long {
+      transform: rotate(-20deg);
    }
 }
 
@@ -198,7 +205,7 @@
    }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: 667px) {
    .layout {
       &__tabs {
          display: flex;
@@ -207,7 +214,35 @@
       }
 
       &__room {
-         margin: 0 25px 30px;
+         width: 250px;
+         margin: 0 10px 30px;
+      }
+
+      &__arrow {
+         top: 25%;
+         border-color: $green-c;
+
+         &-prev {
+            left: -55px;
+         }
+
+         &-next {
+            right: -55px;
+         }
+      }
+   }
+}
+
+@media (min-width: $tablet) {
+   .layout {
+      &__arrow {
+         &-prev {
+            left: -15px;
+         }
+
+         &-next {
+            right: -15px;
+         }
       }
    }
 }
@@ -217,9 +252,8 @@
       padding: 100px 0;
       &__photo {
          @include size(600px, 525px);
-         &:hover {
-            transform: scale(1.05);
-         }
+         margin-left: 20px;
+         cursor: pointer;
       }
 
       &__block {
@@ -233,6 +267,10 @@
          &-next {
             right: -15px;
          }
+         &:hover {
+            background: $blue-c;
+            opacity: .7;
+         }
       }
 
       &__tabs {
@@ -242,8 +280,9 @@
       }
 
       &__room {
-         margin: 0 25px 30px;
-         padding: 50px 25px;
+         width: 330px;
+         margin: 30px 25px 30px;
+         padding: 35px 25px;
          justify-content: space-around;
          &:hover {
             transform: scale(1.05);
@@ -260,7 +299,7 @@
       }
 
       &__circle {
-         top: 0;
+         top: 100px;
          transform: translate(0);
          right: 0;
       }
@@ -280,6 +319,26 @@
          top: -100px;
          left: auto;
          right: 100px;
+      }
+
+      &__arrow {
+         border: none;
+
+         &-next {
+            right: -50px;
+         }
+      }
+   }
+}
+
+@media (min-width: 1200px) {
+   .layout {
+      &__arrow {
+         border: 1px solid $green-c;
+
+         &-next {
+            right: 0px;
+         }
       }
    }
 }

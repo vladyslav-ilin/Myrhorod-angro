@@ -44,9 +44,10 @@
       cursor: pointer;
       &::before {
          @include size(100%);
-         @include pos($t: 0, $l: 0);
+         @include pos($t: 0, $l: -2px);
          content: "";
          background: url("../images/arrow.svg") center no-repeat;
+         transition: all .3s ease;
       }
 
       &-prev {
@@ -57,6 +58,7 @@
          right: 0;
          &::before {
             transform: rotate(180deg);
+            left: 2px;
          }
       }
    }
@@ -103,22 +105,69 @@
    }
 }
 
+@media (max-width: 1023px) and (min-width: 768px) {
+   .gallery {
+      &__arrow {
+         display: none !important;
+      }
+   }
+
+}
+
 @media (min-width: $laptop) {
    .gallery {
       &__item {
          width: 300px;
          height: 215px;
+         cursor: pointer;
+         &:hover {
+            .gallery {
+               &__img {
+                  transform: rotate(-3deg) scale(1.1);
+               }
+            }
+         }
+      }
+
+      &__text {
+         margin-bottom: 50px;
+      }
+
+      &__img {
+         transition: all .3s ease;
       }
 
       &__arrow {
+         border: none;
+         transition: all .3s ease;
+
+         &:hover {
+            background: $blue-c;
+            opacity: .7;
+         }
          &-prev {
-            left: -45px;
+            left: -50px;
          }
 
          &-next {
-            right: -45px;
+            right: -50px;
          }
       }
+
+      &__slider {
+         position: relative;
+
+         & .slick {
+            &-dots {
+               & button {
+                  &:hover {
+                     background: $orange-c;
+                     box-shadow: 0px 0px 10px 5px rgba(219, 141, 68, 0.2);
+                  }
+               }
+            }
+            }
+         }
 
    }
 }
@@ -130,102 +179,16 @@
          height: 250px;
       }
 
-      // &__arrow {
-      //    &-prev {
-      //       left: -65px;
-      //    }
+      &__arrow {
+         border: 1px solid $green-c;
 
-      //    &-next {
-      //       right: -65px;
-      //    }
-      // }
+         &-prev {
+            left: -65px;
+         }
+
+         &-next {
+            right: -65px;
+         }
+      }
    }
 }
-
-// &__item {
-//       @include size(360px, 290px);
-//       border-radius: 20px;
-//       overflow: hidden;
-//       position: relative;
-//       padding: 10px;
-//    }
-
-// &__img {
-//    @include size(100%);
-//    @include align(true, true, absolute);
-//    padding: 10px;
-// }
-
-// .gallery {
-//    position: relative;
-//    padding: 100px 0 140px;
-//    overflow-x: hidden;
-//    text-align: center;
-
-//    &__slider {
-//       position: relative;
-//       text-align: center;
-//       margin-bottom: 40px;
-//    }
-
-//    &__wrapper {
-//       margin: 0 100px;
-//    }
-
-//    &__icon {
-//       @include align(true, true, absolute);
-//       font-size: 24px;
-//       color: $green-c;
-//    }
-
-//    &__item {
-//       @include size(430px, 290px);
-//       border-radius: 20px;
-//       overflow: hidden;
-//       position: relative;
-//    }
-
-//    // &__img {
-//    //    @include size(100%);
-//    //    @include align(true, true, absolute);
-//    // }
-
-//    &__text {
-//       font-size: 36px;
-//       margin-bottom: 75px;
-//    }
-
-//    &__btn {
-//       @include size(70px);
-//       @include align(true, false, absolute);
-//       cursor: pointer;
-//       border-radius: 50px;
-//       border: 1px solid $green-c;
-//       z-index: 98;
-
-//       &--right {
-//          right: 15px;
-//       }
-
-//       &--left {
-//          left: 15px;
-//       }
-//    }
-// }
-
-// .swiper-slide {
-//    width: 430px;
-// }
-
-// .swiper-pagination {
-//    margin-bottom: 100px;
-//    &-bullet {
-//       @include size(10px);
-//       background: #C4C4C4;
-//       margin: 0 10px !important;
-//       &-active {
-//          background: $orange-c;
-//          box-shadow: 0px 0px 10px 3px rgba(219, 141, 68, 0.5);
-//       }
-//    }
-// }

@@ -41,6 +41,7 @@
 @media (min-width: $tablet) {
    .place {
       background: url("../images/place-bgr.jpg") center no-repeat;
+      background-size: cover;
       & h2 {
          margin-bottom: 70px;
       }

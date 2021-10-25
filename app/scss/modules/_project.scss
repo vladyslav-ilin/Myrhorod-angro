@@ -30,7 +30,7 @@
    }
 }
 
-@media (min-width: $tablet) {
+@media (min-width: 667px) {
    .project {
       padding: 60px 0;
 
@@ -54,7 +54,8 @@
    .project {
       padding: 100px 0;
       &__item {
-         width: 31%;
+         width: 30%;
+         margin-bottom: 55px;
       }
 
       &__icom {
