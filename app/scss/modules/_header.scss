@@ -53,6 +53,7 @@
    &__place {
       color: $white-c;
       font-size: 1.125rem;
+      transition: all .3s ease;
    }
 
    &__box {
@@ -121,6 +122,12 @@
       &__box {
          margin-left: 20%;
          text-align: left;
+      }
+
+      &__place {
+         &:hover {
+            color: $green-c;
+         }
       }
    }
 }

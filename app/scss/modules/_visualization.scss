@@ -12,6 +12,7 @@
          content: "";
          background: $blue-c;
          border-radius: 20px;
+         transition: all .3s ease;
       }
    }
 
@@ -23,9 +24,10 @@
    }
 
    &__img {
-      @include size(102%, 100%);
-      @include align(true, true, absolute);
+      @include size(105%, 100%);
+      @include pos($t:0, $r:-5px);
       object-fit: cover;
+      transition: all .3s ease;
    }
 
    &__btn {
@@ -88,5 +90,24 @@
       &__item {
          height: 700px;
       }
+   }
+}
+
+@media (min-width: $laptop) {
+   .visualization {
+      &:hover {
+         .visualization {
+            &__img {
+               transform: rotate(-2deg) scale(1.1);
+            }
+
+            &__wrapper {
+               &::before {
+                  background: $green-c;
+               }
+            }
+         }
+      }
+
    }
 }

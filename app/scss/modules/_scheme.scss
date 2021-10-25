@@ -227,8 +227,9 @@
          }
       }
       &__btn {
-         @include pos($t:calc(50% - 80px), $l:100px);
+         @include pos($t:calc(50% - 80px), $l:0);
          display: block;
+         left: 20px;
 
          &--mobile {
             color: $white-c;
@@ -244,6 +245,10 @@
          &--big {
             right: 65px;
          }
+      }
+
+      &__btn {
+         left: 100px;
       }
    }
 }

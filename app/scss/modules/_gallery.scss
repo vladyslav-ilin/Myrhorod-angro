@@ -105,14 +105,28 @@
    }
 }
 
-@media (max-width: 1023px) and (min-width: 768px) {
+@media (min-width: $tablet) {
+   .gallery {
+      &__arrow {
+         &-prev {
+            left: -50px;
+         }
+
+         &-next {
+            right: -50px;
+         }
+      }
+   }
+}
+
+/*@media (max-width: 1023px) and (min-width: 768px) {
    .gallery {
       &__arrow {
          display: none !important;
       }
    }
 
-}
+}*/
 
 @media (min-width: $laptop) {
    .gallery {

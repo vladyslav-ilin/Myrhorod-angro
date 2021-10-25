@@ -35,6 +35,11 @@
       text-align: center;
       color: $white-c;
    }
+
+   &__angro {
+      transition: all .3s ease;
+      color: $white-c;
+   }
 }
 
 @media (min-width: $tablet) {
@@ -85,7 +90,6 @@
       }
 
       &__angro {
-         transition: all .3s ease;
          color: $white-c;
          &:hover {
             color: $green-c;

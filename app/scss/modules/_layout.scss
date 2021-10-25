@@ -105,8 +105,8 @@
       }
 
       &-next {
-         right: 2px;
          &::before {
+            left: 2px;
             transform: rotate(180deg);
          }
       }
@@ -178,7 +178,7 @@
    }
 
    &__long {
-      transform: rotate(-20deg);
+      transform: rotate(25deg);
    }
 }
 
