@@ -6,6 +6,7 @@
    & .text__bgr {
       top: calc(50% + 35px);
       color: $white-c;
+      pointer-events: none;
    }
 
    & h2 {
@@ -74,6 +75,10 @@
          line-height: 1.5rem;
          width: 400px;
          margin: 0 auto;
+      }
+
+      &__item {
+         padding: 45px 10px;
       }
    }
 }

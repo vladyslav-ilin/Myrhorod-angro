@@ -39,7 +39,7 @@
    &__arrow {
       @include size(30px);
       @include align(true, false, absolute);
-      top: calc(50% - 30px);
+      top: 50%;
       z-index: 50;
       cursor: pointer;
       &::before {
@@ -137,7 +137,7 @@
          &:hover {
             .gallery {
                &__img {
-                  transform: rotate(-3deg) scale(1.1);
+                  transform: scale(1.1);
                }
             }
          }

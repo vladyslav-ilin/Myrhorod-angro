@@ -11,7 +11,6 @@
 		// Code
 
       $('.gallery__items').slick({
-         dots: true,
          prevArrow: '<div class="gallery__arrow gallery__arrow-prev"></div>',
          nextArrow: '<div class="gallery__arrow gallery__arrow-next"></div>',
          autoplay: true,

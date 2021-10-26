@@ -18,6 +18,7 @@
    }
 
    &__photo {
+      display: block;
       height: 320px;
       position: relative;
    }
@@ -47,6 +48,10 @@
    &__suptitle {
       font-weight: 700;
       margin-bottom: 10px;
+   }
+
+   &__sub {
+      line-height: 1.4rem;
    }
 
    & .slick {
