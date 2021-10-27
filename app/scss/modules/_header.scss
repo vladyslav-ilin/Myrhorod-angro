@@ -59,12 +59,34 @@
    &__box {
       text-align: center;
    }
+
+   &__thanks {
+      font-size: 3rem;
+      padding: 10% 50px 0;
+      text-align: center;
+      line-height: 5rem;
+
+      strong {
+         display: block;
+         font-size: 4rem;
+      }
+   }
 }
 
 @media (max-width: $tablet) {
    .header {
       &__suptitle {
          margin-top: 10vh;
+      }
+
+      &__thanks {
+         font-size: 2rem;
+         line-height: 3.5rem;
+         padding: 10% 20px;
+
+         strong {
+            font-size: 3rem;
+         }
       }
    }
 }
